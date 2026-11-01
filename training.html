@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EM</title>
+<script>
+/* Language: ?lang=xx loads assets/content-xx.js (falls back to the base version, content-en.js) */
+(function(){ var m = /[?&]lang=([a-z]{2}(?:-[A-Za-z]{2})?)/.exec(location.search); window.LANG = m ? m[1] : 'en';
+  document.write('<script src="assets/content-' + LANG + '.js"><\/script>'); })();
+</script>
+<script>if (!window.COURSE){
+  if (LANG !== 'en') document.addEventListener('DOMContentLoaded', function(){ var b = document.createElement('div');
+    b.style.cssText = 'position:fixed;left:0;right:0;bottom:0;z-index:99999;background:#E5484D;color:#fff;font:600 14px/1.4 system-ui,sans-serif;padding:10px 16px;text-align:center';
+    b.textContent = '⚠ assets/content-' + LANG + '.js could not be loaded (missing file or an error inside it). Showing the base version (content-en.js) instead.'; document.body.appendChild(b); });
+  window.LANG = 'en'; document.write('<script src="assets/content-en.js"><\/script>'); }</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/course.css">
+</head>
+<body>
+<nav class="nav" id="nav"></nav>
+<main id="view"></main>
+<div class="ovl" id="modal"></div>
+<canvas id="confetti"></canvas>
+<footer class="foot"><span id="footTxt"></span><button id="devLink"></button></footer>
+<script src="shared/course-engine.js"></script>
+<script src="assets/skills.js"></script>
+<script src="shared/start-survey.js"></script>
+<script src="shared/final-survey.js"></script>
+</body>
+</html>
